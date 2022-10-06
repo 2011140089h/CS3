@@ -1,0 +1,11 @@
+<% if flash[:notice] %>
+    <%= flash[:notice] %>
+<% end %>
+
+<%= form_tag "/cs3/login", method: :post do %>
+    <p><%= label_tag :uid, "ユーザーID" %></p>
+    <p><%= text_field_tag :uid %></p>
+    <p><%= label_tag :pass, "パスワード" %></p>
+    <p><%= password_field_tag :password %></p>
+    <%= submit_tag "ログイン" %>
+<% end %>
